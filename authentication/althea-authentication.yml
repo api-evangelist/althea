@@ -1,0 +1,24 @@
+generated: '2026-07-17'
+method: searched
+source: https://us.althea.kr/.well-known/openid-configuration
+summary:
+  types: [openIdConnect, oauth2]
+  oauth2_flows: [authorizationCode]
+  note: >-
+    Customer-facing auth is Shopify Customer Accounts (OpenID Connect). Agent
+    read/transact access to the storefront MCP is unauthenticated for browsing;
+    checkout requires buyer approval via Shop Pay / UCP.
+schemes:
+- name: ShopifyCustomerAccountOIDC
+  type: openIdConnect
+  openIdConnectUrl: https://us.althea.kr/.well-known/openid-configuration
+  issuer: https://shopify.com/authentication/9377939535
+  authorization_endpoint: https://shopify.com/authentication/9377939535/oauth/authorize
+  token_endpoint: https://shopify.com/authentication/9377939535/oauth/token
+  end_session_endpoint: https://shopify.com/authentication/9377939535/logout
+  jwks_uri: https://shopify.com/authentication/9377939535/.well-known/jwks.json
+  response_types: [code]
+  id_token_signing_alg: [RS256]
+  token_endpoint_auth_methods: [client_secret_basic]
+  scopes: [openid, email, customer-account-api:full, customer-account-mcp-api:full]
+  sources: [well-known/althea-openid-configuration.json, well-known/althea-oauth-authorization-server.json]
