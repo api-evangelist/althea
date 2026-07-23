@@ -1,0 +1,23 @@
+generated: '2026-07-17'
+method: searched
+source: https://us.althea.kr/.well-known/
+host: https://us.althea.kr
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: althea-openid-configuration.json
+  note: Shopify Customer Account OIDC discovery (issuer shopify.com/authentication/9377939535)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: althea-oauth-authorization-server.json
+  note: RFC 8414 OAuth 2.0 Authorization Server Metadata (Shopify Customer Account)
+- path: /.well-known/ucp
+  status: 200
+  file: althea-ucp.json
+  note: Universal Commerce Protocol (UCP) merchant profile - agent commerce discovery
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

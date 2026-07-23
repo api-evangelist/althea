@@ -1,7 +1,17 @@
 aid: althea
 name: Althea
-description: Althea is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Althea (Althea Global, us.althea.kr) is a Seoul-founded K-beauty e-commerce
+  company operating an online marketplace that curates and ships authentic
+  Korean skincare, makeup, and hair and body-care products directly from Korea to
+  more than 200 countries, with regional storefronts for the USA, Korea,
+  Malaysia, Singapore, and the Philippines. Founded in 2015 and backed by 500
+  Global, Tekton Ventures, FirstFloor Capital, InnoVen Capital, and Korea
+  Development Bank, the platform runs on Shopify and exposes a native
+  agent-commerce surface: a live Shopify Storefront MCP server, a Universal
+  Commerce Protocol (UCP) merchant profile and MCP endpoint, Shopify Customer
+  Account OpenID Connect, and published /llms.txt and /agents.md agent
+  instructions for AI shopping assistants.
 url: https://raw.githubusercontent.com/api-evangelist/althea/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +19,47 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+image: https://us.althea.kr/cdn/shop/files/althea-logo_a64c523b-c7ea-4aa5-ac1e-19107b425819_grande.png?v=1614805110
 tags:
 - Company
-apis: []
+- E-Commerce
+- Retail
+- Beauty
+- Cosmetics
+- K-Beauty
+- Skincare
+- Agent Commerce
+- Shopify
+apis:
+- name: Althea Storefront Agent Commerce API
+  description: >-
+    Agent-facing commerce surface for the Althea storefront on Shopify: a live
+    Storefront MCP server (search_catalog, get_cart, update_cart,
+    get_product_details, search_shop_policies_and_faqs), a Universal Commerce
+    Protocol (UCP) shopping service, and public read-only product/collection JSON
+    endpoints.
+  humanURL: https://us.althea.kr/llms.txt
+  baseURL: https://us.althea.kr/api/mcp
+  properties:
+  - type: MCPServer
+    url: mcp/althea-mcp.yml
+  - type: Documentation
+    url: https://us.althea.kr/agents.md
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +68,36 @@ maintainers:
 common:
 - type: Website
   url: https://us.althea.kr
+- type: Blog
+  url: https://us.althea.kr/blogs/beauty-feed
+- type: Support
+  url: https://support.althea.kr/hc/en-us
+- type: Login
+  url: https://us.althea.kr/account
+- type: TermsOfService
+  url: https://us.althea.kr/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://us.althea.kr/policies/privacy-policy
+- type: Documentation
+  url: https://us.althea.kr/agents.md
+- type: MCPServer
+  url: mcp/althea-mcp.yml
+- type: LLMsTxt
+  url: llms/althea-llms.txt
+- type: WellKnown
+  url: well-known/althea-well-known.yml
+- type: Authentication
+  url: authentication/althea-authentication.yml
+- type: OAuthScopes
+  url: scopes/althea-scopes.yml
+- type: Conformance
+  url: conformance/althea-conformance.yml
+- type: Conventions
+  url: conventions/althea-conventions.yml
+- type: DomainSecurity
+  url: security/althea-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

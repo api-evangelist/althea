@@ -1,0 +1,37 @@
+generated: '2026-07-17'
+method: searched
+source: https://us.althea.kr/llms.txt
+scope: >-
+  Cross-cutting request/response semantics for the agent-commerce surface of the
+  Althea (Shopify/UCP) storefront, captured from the published /llms.txt agent
+  instructions and the UCP merchant profile. No first-party OpenAPI is published.
+authentication:
+  browsing: none (read-only product/collection/search endpoints are public)
+  transaction: buyer approval required at payment; route via Shop Pay / UCP
+  customer_account: Shopify Customer Account OIDC (see authentication/althea-authentication.yml)
+pagination:
+  style: cursor
+  response_field: pagination.cursor
+  note: Initial results limited; pass pagination.cursor from the response to fetch more.
+rate_limiting:
+  signal: HTTP 429
+  scope: per-IP on the MCP endpoint
+  guidance: back off on 429 responses
+buyer_context:
+  fields: [context.address_country, context.address_region, context.postal_code, context.language, context.currency, context.intent]
+  note: Pass buyer context for accurate pricing, localization, and availability.
+error_semantics:
+  transport: JSON-RPC 2.0 error objects on the MCP endpoints (e.g. code -32001 UCP discovery failed)
+read_only_endpoints:
+  products_json: /products/{handle}.json
+  collection_json: /collections/{handle}/products.json
+  search: /search?q={query}&type=product
+  sitemap: /sitemap.xml
+idempotency:
+  supported: false
+  note: No idempotency-key contract is documented for the storefront/UCP surface.
+cross_links:
+  authentication: authentication/althea-authentication.yml
+  scopes: scopes/althea-scopes.yml
+  mcp: mcp/althea-mcp.yml
+  well_known: well-known/althea-well-known.yml

@@ -1,0 +1,42 @@
+generated: '2026-07-17'
+method: searched
+status: published
+source: https://us.althea.kr/llms.txt
+description: >-
+  Althea Global runs on Shopify and exposes native agent-commerce endpoints. Two
+  MCP servers are live at the store domain: the Shopify Storefront MCP
+  (/api/mcp) which returns a working tools/list, and the Universal Commerce
+  Protocol (UCP) MCP (/api/ucp/mcp) advertised in /.well-known/ucp. These are
+  platform-provided (Shopify), reachable at Althea's own domain.
+servers:
+- name: althea-storefront-mcp
+  transport: http
+  url: https://us.althea.kr/api/mcp
+  protocol: mcp
+  verified: true
+  note: Shopify Storefront MCP; tools/list returns 200 with a working tool set.
+- name: althea-ucp-mcp
+  transport: http
+  url: https://us.althea.kr/api/ucp/mcp
+  protocol: ucp-mcp
+  verified: true
+  note: >-
+    Universal Commerce Protocol shopping service (dev.ucp.shopping), UCP versions
+    2026-04-08 and 2026-01-23. tools/list requires a valid UCP agent profile URI.
+  spec: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+tools:
+- name: search_catalog
+  description: Search for products from the online store (UCP dev.ucp.shopping.catalog.search).
+  source: https://us.althea.kr/api/mcp
+- name: get_cart
+  description: Get the cart including items, shipping options, discount info, and checkout URL.
+  source: https://us.althea.kr/api/mcp
+- name: update_cart
+  description: Add/remove/update line items and buyer info on a cart.
+  source: https://us.althea.kr/api/mcp
+- name: search_shop_policies_and_faqs
+  description: Get facts about the store's policies, products, or services.
+  source: https://us.althea.kr/api/mcp
+- name: get_product_details
+  description: Look up a product by ID, optionally selecting a specific variant.
+  source: https://us.althea.kr/api/mcp

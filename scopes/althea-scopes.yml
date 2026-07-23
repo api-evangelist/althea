@@ -1,0 +1,24 @@
+generated: '2026-07-17'
+method: searched
+source: https://us.althea.kr/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+schemes:
+- name: ShopifyCustomerAccountOIDC
+  source: well-known/althea-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://shopify.com/authentication/9377939535/oauth/authorize
+    tokenUrl: https://shopify.com/authentication/9377939535/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issue an ID token for the customer.
+  flows: [authorizationCode]
+- scope: email
+  description: Access the authenticated customer's email address.
+  flows: [authorizationCode]
+- scope: customer-account-api:full
+  description: Full access to the Shopify Customer Account API on behalf of the signed-in customer.
+  flows: [authorizationCode]
+- scope: customer-account-mcp-api:full
+  description: Full access to the Customer Account MCP API for agent-driven customer account actions.
+  flows: [authorizationCode]
