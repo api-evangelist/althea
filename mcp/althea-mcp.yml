@@ -2,12 +2,10 @@ generated: '2026-07-17'
 method: searched
 status: published
 source: https://us.althea.kr/llms.txt
-description: >-
-  Althea Global runs on Shopify and exposes native agent-commerce endpoints. Two
-  MCP servers are live at the store domain: the Shopify Storefront MCP
-  (/api/mcp) which returns a working tools/list, and the Universal Commerce
-  Protocol (UCP) MCP (/api/ucp/mcp) advertised in /.well-known/ucp. These are
-  platform-provided (Shopify), reachable at Althea's own domain.
+description: 'Althea Global runs on Shopify and exposes native agent-commerce endpoints. Two MCP servers
+  are live at the store domain: the Shopify Storefront MCP (/api/mcp) which returns a working tools/list,
+  and the Universal Commerce Protocol (UCP) MCP (/api/ucp/mcp) advertised in /.well-known/ucp. These are
+  platform-provided (Shopify), reachable at Althea''s own domain.'
 servers:
 - name: althea-storefront-mcp
   transport: http
@@ -20,9 +18,8 @@ servers:
   url: https://us.althea.kr/api/ucp/mcp
   protocol: ucp-mcp
   verified: true
-  note: >-
-    Universal Commerce Protocol shopping service (dev.ucp.shopping), UCP versions
-    2026-04-08 and 2026-01-23. tools/list requires a valid UCP agent profile URI.
+  note: Universal Commerce Protocol shopping service (dev.ucp.shopping), UCP versions 2026-04-08 and 2026-01-23.
+    tools/list requires a valid UCP agent profile URI.
   spec: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
 tools:
 - name: search_catalog
@@ -40,3 +37,11 @@ tools:
 - name: get_product_details
   description: Look up a product by ID, optionally selecting a specific variant.
   source: https://us.althea.kr/api/mcp
+deployment:
+  mode: remote
+  endpoint: https://us.althea.kr/api/mcp
+  verified: probed
+  probe: live
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
