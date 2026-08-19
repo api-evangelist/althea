@@ -31,7 +31,7 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-17'
 image: https://us.althea.kr/cdn/shop/files/althea-logo_a64c523b-c7ea-4aa5-ac1e-19107b425819_grande.png?v=1614805110
