@@ -81,6 +81,9 @@ apis:
     url: mcp/althea-mcp.yml
   - type: Documentation
     url: https://us.althea.kr/agents.md
+  x-surface: platform-generated
+  x-platform: shopify
+  x-platform-surface: storefront-mcp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
