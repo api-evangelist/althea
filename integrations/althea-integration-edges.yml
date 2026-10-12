@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/althea/integrations
+- https://n8n.io/integrations/althea/
+- https://composio.dev/toolkits/althea
+- https://monid.ai/tools/althea
+checked:
+- https://composio.dev/toolkits/althea
+- https://monid.ai/tools/althea
+- https://n8n.io/integrations/althea/
+- https://zapier.com/apps/althea/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
