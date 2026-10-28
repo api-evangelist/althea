@@ -64,6 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Althea is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Althea (Althea Global, us.althea.kr) is a Seoul-founded K-beauty e-commerce company operating an online marketplace that curates and ships authentic Korean skincare, makeup, and hair and body-care products directly from Korea to more than 200 countries, with regional storefronts for the USA, Korea, Malaysia, Singapore, and the Philippines. Founded in 2015 and backed by 500 Global, Tekton Ventures, FirstFloor Capital, InnoVen Capital, and Korea Development Bank, the platform runs on Shopify and exposes a native agent-commerce surface: a live Shopify Storefront MCP server, a Universal Commerce Protocol (UCP) merchant profile and MCP endpoint, Shopify Customer Account OpenID Connect, and published /llms.txt and /agents.md agent instructions for AI shopping assistants.
 
-Backed by: 500-global — https://us.althea.kr
+**Areas:** Company · E-Commerce · Retail · Beauty · Cosmetics · K-Beauty · Skincare · Agentic Commerce · Shopify
+
+## Althea on APIs.io
+
+Everything profiled for Althea is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/althea/](https://apis.io/providers/althea/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Althea Storefront Agent Commerce API](https://apis.io/apis/althea/althea-storefront-agent-commerce-api/) — Agent-facing commerce surface for the Althea storefront on Shopify: a live Storefront MCP server (search_catalog, get_cart, update_cart,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [althea-mcp.yml](https://apis.io/servers/althea/althea-mcp-yml/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Althea Authentication](https://apis.io/security/althea/althea-authentication/)
+- [Althea Domain Security](https://apis.io/security/althea/althea-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Althea Scopes](https://apis.io/scopes/althea/althea-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://us.althea.kr)
+- [Documentation](https://us.althea.kr/agents.md)
+- [Support](https://support.althea.kr/hc/en-us)
+- [Blog](https://us.althea.kr/blogs/beauty-feed)
+- [Terms of service](https://us.althea.kr/policies/terms-of-service)
+- [Privacy policy](https://us.althea.kr/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 23.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 27.6 |
+
+**Agent readiness 13.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/althea/](https://apis.io/providers/althea/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Althea: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/althea/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
